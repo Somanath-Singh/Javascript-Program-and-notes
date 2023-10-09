@@ -1,0 +1,26 @@
+<!-- example on Arrays -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<title>Array</title>
+ </head>
+ <body>
+	<h3>demo on  for in loop (JS6) </h3>
+	<script>
+		const a = [10,20,30];
+		for(let i in a)
+			document.write(`${i} &nbsp; ${a[i]}<br>`);
+ 	</script>	
+	<h3>demo on  for of loop (JS6) </h3>
+	<script>
+		const b = [11,22,33,44,55,66,77,88];
+		let total=0;
+		for(let e of b) {
+			document.write(`${e}  `);
+			total+=e;
+		}
+		document.write(`<br>Total	${total}`);
+ 	</script>	
+ </body>
+</html>

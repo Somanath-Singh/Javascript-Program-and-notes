@@ -1,0 +1,33 @@
+<!-- example on Arrays -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<title>Array</title>
+ </head>
+ <body>
+	<h3>demo on array literal</h3>
+	<script>
+		let a = [];	//array declaration
+		document.write(`size	${a.length}<br>`)
+		document.write(`array	:${a}<br>`)
+		a[0]=10;	//assigning
+		a[1]=20;
+		a[2]=30;
+		document.write(`size	${a.length}<br>`)
+		document.write(`array	:${a}<br>`)
+
+		let runs=[4,5,10,9,2,11,8,7];	//array init
+		//document.write(`${runs}`);
+		let total=0;
+		for(let i=0; i<runs.length; i++)
+		{
+			document.write(`Over${i+1} ${runs[i]}<br>`);
+			total+=runs[i];
+		}
+		document.write(`Total Runs		:${total}<br>`);
+		document.write(`Overs	:${runs.length}<br>`);
+		document.write(`RR	:${total/runs.length}<br>`);
+	</script>	
+ </body>
+</html>

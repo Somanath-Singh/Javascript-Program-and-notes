@@ -1,0 +1,31 @@
+<!-- exampe on functions -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<title>Functions</title>
+	<script src="arrowfuns.js"></script>
+  </head>
+  <body>
+		<h3>demo on Arrow funtions (JS6)</h3>
+		<script>
+			myfun();
+			let res=add(12,56);	//fun calling
+			document.write(`${res}<br>`);
+			document.write(`${power(2,6)} <br>`);
+			document.write(`${natsum(10)} <br>`);
+
+			const eles=[101,5,30,8,60];
+			document.write(`Eles	${eles}<br>`);
+			//extending functionality
+			eles.sort( (i,j) => i-j );		//call back
+			document.write(`Sort Eles	${eles}<br>`);
+
+			//extending functionality
+			eles.forEach( (e) =>  {
+											document.write(`${e} `); 
+										}  
+									); //call back
+		</script>
+  </body>
+</html>

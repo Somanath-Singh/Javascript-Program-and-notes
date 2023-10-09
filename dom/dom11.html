@@ -1,0 +1,50 @@
+<!-- example on DOM -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dom</title>
+ </head>
+ <body>
+	<h3>demo on adding elements</h3>
+	<div id="div1">
+		<button id="bt"> add to cart</button>
+	</div>
+	<script>
+		document.querySelector("#bt").onclick=function(){
+			//img obejct creation 
+			const img=document.createElement("img");
+			img.src="images/one11.jpg";
+
+			//h4 object creation
+			const h4=document.createElement("h4");
+			h4.innerText="OnePlus 11";
+			
+			//div object creation for new price
+			const np=document.createElement("div");
+			np.innerHTML="&#8377;40000";
+			np.style.fontSize="22px";
+
+			//div object creation for old price
+			const op=document.createElement("div");
+			op.innerHTML="<strike>&#8377;45000</strike>";
+			op.style.fontSize="20px";
+			
+			//container object 
+			const product=document.createElement("div");
+			product.style.width="200px";
+			product.style.background="cyan";
+			product.style.padding="10px";
+
+			//adding items to container
+			product.appendChild(img);
+			product.appendChild(h4);
+			product.appendChild(np);
+			product.appendChild(op);
+
+			//adding container to body
+			document.body.appendChild(product);
+		}
+	</script>
+ </body>
+</html>

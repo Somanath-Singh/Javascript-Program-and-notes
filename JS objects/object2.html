@@ -1,0 +1,31 @@
+<!-- example on JS Objects -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+  </head>
+  <body>
+		<h3>demo on  object literal with properties</h3>		
+		<script>
+			let ob = {
+								add(a,b) {
+									return a+b;
+								},
+								sub:function(a,b){
+										return a-b;
+								},
+								product: (a,b)=>{ 
+										return a*b; 
+								}
+							};
+			 
+			document.write(`${ob}<br>`);
+			document.write(`${ob.add(10,20)}<br>`);
+			document.write(`${ob.sub(45,8)}<br>`);
+			document.write(`${ob.product(12,8)}<br>`);
+		</script>		 
+   </body>
+</html>
+
+

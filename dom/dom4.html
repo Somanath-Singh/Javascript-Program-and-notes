@@ -1,0 +1,35 @@
+<!-- example on DOM -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+	<style>
+		#i{
+			color:red;
+		}
+		.cls{
+			color:blue;
+		}
+	</style>
+ </head>
+ <body>
+	<h3>demo on  document methods</h3>
+	<h1 id="i">Apple</h1>
+
+	<h2 class="cls">Banana</h2>
+	<h2 class="cls">Orange</h2>
+	<h2 class="cls">Manog</h2>
+	<hr>
+	<script>
+		const ob = document.querySelector("#i");
+		document.write(`${ob}<br>`);
+
+		const ob2 = document.querySelector(".cls");	//1instance only
+		document.write(`${ob2}<br>`);
+
+		const ob3 = document.querySelectorAll(".cls");	//3instances
+		document.write(`${ob3}<br>`);		 
+	</script>
+  </body>
+</html>

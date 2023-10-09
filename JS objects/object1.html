@@ -1,0 +1,32 @@
+<!-- example on JS Objects -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+  </head>
+  <body>
+		<h3>demo on  object literal </h3>		
+		<script>
+			let ob = { };	 //object creation  or declaration
+			document.write(`${ob}<br>`)
+
+			//object init with properties
+			let stu = {"rno":1, "name":"ram", "course":"html"};  //object initialization
+			document.write(`${stu}<br>`)
+			document.write(`RollNo	:${stu.rno}<br>`);
+			document.write(`Name	:${stu.name}<br>`);
+			document.write(`Course	:${stu.course}<br>`);
+
+			let emp = { id:1010, name:"sam", job:"sse", sal:35000};
+			document.write(`${emp}<br>`)
+			document.write(`${emp.id} &nbsp; &nbsp; ${emp.name} &nbsp; &nbsp; ${emp.job} &nbsp; &nbsp; ${emp.sal}<br>`);
+			//const k = Object.keys(emp);
+			//const v = Object.values(emp);
+			document.write(`keys	:${Object.keys(emp)}<br>`);
+			document.write(`values	:${Object.values(emp)}<br>`);
+		</script>		 
+   </body>
+</html>
+
+

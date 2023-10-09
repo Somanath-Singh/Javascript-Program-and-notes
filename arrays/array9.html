@@ -1,0 +1,34 @@
+<!-- example on Arrays -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<title>Array</title>
+ </head>
+ <body>
+	<h3>demo on  array destructuring (JS6)</h3>
+	<script>
+		const a = [10,20,30];		
+		//let x=a[0], y=a[1], z=a[2];			OR
+		let [x, y, z] = a;	//destructuring
+		document.write(`A	${a}<br>`)
+		document.write(`x	${x}<br>y	${y}<br>z	${z}<br>`);
+
+		const eles = [`html`,`css`,`javascript`,`jquery`,`ajax`,`json`,`angular`,`react`,`node`];
+		const [e1,e2]=eles;	//destructuring
+		document.write(`Eles	${eles}<br>`)
+		document.write(`e1	${e1}<br>e2		${e2}<br>`);
+
+		let [c1,,c2,,...c3]=eles;		//destructuring with skip & ...
+		document.write(`c1	${c1}<br>c2		${c2}<br>c3		${c3}<br>`);
+
+		let p=10, q=20;
+		/*		r=p;		p=q;		q=r					OR
+				p=p+q;		q=p-q;		p=p-q;	OR
+				p=p*q;		q=p/q;		p=p/q;	OR
+				p=p^q;		q=p^q;		p=p^q	OR	*/
+		[q,p]=[p,q];		//swapping
+		document.write(`p	${p}<br>	q	${q}`);
+ 	</script>	
+ </body>
+</html>

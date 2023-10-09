@@ -1,0 +1,36 @@
+<!-- example on variables -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<title>JS11</title>
+ </head>
+ <body>
+		<h3>demo on Non-Primitive DT</h3>
+		<script>
+			//object creation & init with default values
+			var st = new String();
+			let n = new Number();
+			let b = new Boolean();
+			const d = new Date();
+			let a= [ ];
+			document.write("st val	", st, "<br>");
+			document.write("b val	", b, "<br>");
+			document.write("n val	", n, "<br>");
+			document.write("date		:", d, "<br>");
+			document.write("array	=> ", a, "<br>");
+
+			//object creation & init with given values
+			var st1 = new String("Sivakumar");
+			let n1 = new Number(123);
+			let b1 = new Boolean(true);
+			const d1 = new Date("30-aug-2023");   //(2023,08,30,06,30);
+			let a1= [10,20,30,40,50];
+			document.write("st1 val	", st1, "<br>");
+			document.write("b1 val	", b1, "<br>");
+			document.write("n1 val	", n1, "<br>");
+			document.write("date		:", d1, "<br>");
+			document.write("array	=> ", a1, "<br>");
+		</script>
+ </body>
+</html>

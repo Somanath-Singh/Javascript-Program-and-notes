@@ -1,0 +1,38 @@
+<!-- example on inheritance  -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>OOPS</title>
+ </head>
+ <body>
+   <h2>demo on Hierarchical Inheritance </h2>
+   <script>
+     class Parent
+     {
+       constructor(){
+		 document.write("Parent const invoked<br>");
+       }
+     }
+
+     class Child1 extends Parent  
+     {
+       constructor(){
+         super();		//it calls Parent constructor 
+		 document.write("Child1 const invoked<br>");
+       }
+     }
+
+     class Child2 extends Parent  		 
+     {
+       constructor(){
+         super();		//it calls Parent constructor 
+		 document.write("Child2 const invoked<br>");
+       }
+     }
+
+		//object creation
+		new Child1();		//Child1+Parent
+		new Child2();		//Child2+Parent
+   </script>
+ </body>
+</html>

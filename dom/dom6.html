@@ -1,0 +1,24 @@
+<!-- example on DOM -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<title>Dom</title>
+ </head>
+ <body>
+	<h3>demo on element properties </h3>
+	<output id="op1"> </output> <bR>
+	<output id="op2"> </output> <bR>
+	<hr>
+	<script>
+		const op1 = document.getElementById("op1");
+		const op2 = document.getElementById("op2");
+		let p=prompt("enter amount");			
+		op1.innerText=`Amount is <strong>&#8377;`+p+`<strong>`;
+		op2.innerHTML=`Amount is <strong>&#8377;`+p+`<strong>`;
+
+		document.write(`${op1}<br>`);
+		document.write(`${op1.tagName}`);
+	</script>
+  </body>
+</html>

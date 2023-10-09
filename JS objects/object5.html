@@ -1,0 +1,20 @@
+<!-- example on JS Objects -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+  </head>
+  <body>
+		<h3>demo on objects</h3>		
+		<script>
+			const books = [ {title:"C prog", author:"DR", price:400},
+											{title:"Web designing", author:"Tim", price:600},
+											{title:"Java World", author:"James", price:560},
+											{title:"DBMS", author:"Larry", price:444}
+											];
+				for(let b of books)
+					document.write(`${b.title} &nbsp; ${b.author} &nbsp; ${b.price} <br>`);
+		</script>
+   </body>
+</html>

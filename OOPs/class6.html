@@ -1,0 +1,38 @@
+<!-- example on OOPs  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Classes</title>
+	<script>
+		class One
+		{
+			constructor(){
+				document.write(`hi, i am One<br>`);
+			}
+		}
+		class Two extends One
+		{
+			constructor() {
+				super();		//One const
+				document.write(`hi, i am Two<br>`);
+			}
+		}
+		class Three extends Two
+		{
+			constructor() {
+				super();		//Two constr
+				document.write(`hi, i am Three<br>`);
+			}
+		}
+	</script>
+  </head>
+  <body>
+		<h3>demo on inheritance</h3>
+   		<script>
+			//new One();		<== One
+			//new Two();		//<== Two+One
+			new Three();		//<== Three+Two+One
+		</script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!-- exampe on functions -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<title>Functions</title>
+	<script>
+		//fun developing
+		const sum = function(...n) {
+									let total=0;
+									for(let x of n)
+										total+=x;
+
+									return total;
+								}
+	</script>
+  </head>
+  <body>
+		<h3>demo on funtion with rest param (JS6)</h3>
+		<script>
+			document.write(`${ sum(10,20) }<br>`);
+			document.write(`${ sum() }<br>`);
+			document.write(`${ sum(1,2,3,4,5,6) }<br>`);
+		</script>
+  </body>
+</html>

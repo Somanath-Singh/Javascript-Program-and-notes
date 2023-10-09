@@ -1,0 +1,30 @@
+<!-- exampe on functions -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<title>Functions</title>
+	<script src="exprfuns.js"></script>
+  </head>
+  <body>
+		<h3>demo on expr funtions</h3>
+		<script>
+			let res=add(12,56);	//fun calling
+			document.write(`${res}<br>`);
+
+			document.write(`${product(15,9)} <br>`);
+
+			const eles=[101,5,30,8,60];
+			document.write(`Eles	${eles}<br>`);
+			//extending functionality
+			eles.sort( function(i,j) { return i-j; } );		//call back
+			document.write(`Sort Eles	${eles}<br>`);
+
+			//extending functionality
+			eles.forEach( function(e) { 
+											document.write(`${e} `); 
+										}  
+									); //call back
+		</script>
+  </body>
+</html>

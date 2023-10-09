@@ -1,0 +1,31 @@
+<!-- example on JS Classes -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Classes</title>
+  </head>
+  <body>
+		<h3>demo on class</h3>
+   		<script>
+			//class creation
+			class Sample   
+			{
+				//let a=10;	error
+				//var b=20;	error
+				//const c=1;	error
+				//d=11;
+			}
+		 
+			const ob1 = new Sample();	 //object creation & init
+			const ob2 = new Sample();	 //object creation & init
+			document.write(`${ob1}<br>${ob1}<br>`);
+
+			Sample.prototype.a=101;		//adding new prop to class
+			ob1.x="ram";		//adding new prop to object ob1 only
+			ob2.y="sam";   //adding new prop to object ob2 only
+			document.write(`A	:${ob1.a}<br> X	:${ob1.x}<br>`);
+			document.write(`A	:${ob2.a}<br> Y	:${ob2.y}<br>`);
+		</script>
+  </body>
+</html>

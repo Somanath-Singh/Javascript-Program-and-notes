@@ -1,0 +1,31 @@
+<!-- example on Arrays -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<title>Array</title>
+ </head>
+ <body>
+	<h3>demo on  array methods</h3>
+	<script>
+		const a = [10,20,30];		
+		let st="manogo";
+		for(let i in st)
+				document.write(`${st[i]} `)
+
+		const eles = [ ];	
+		eles.push(10);	
+		eles.push(20);
+		eles.push(30);
+		let n=eles.push(40);
+		document.write(`<br>Eles	${eles}`);
+		document.write(`<br>${n}`);
+	
+		let e=eles.pop();		
+		document.write(`<br>1st ${e}`);
+		document.write(`<br>2nd ${eles.pop()}`);
+		eles.push(11,22,33);
+		document.write(`<br>${eles}`);
+ 	</script>	
+ </body>
+</html>

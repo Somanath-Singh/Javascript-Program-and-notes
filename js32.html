@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<title>JS32</title>
+ </head>
+ <body>
+	<label>Table Number</label>
+	<input type="text" id="tableNum">
+	<button onclick="printTable()"> Print Table </button>
+	<script>
+		function printTable()
+		{
+			let n,i,res;
+			n=tableNum.value;	
+			for(i=1; i<=20; ++i)
+			{
+				res=n*i;
+				document.write(`${n} * ${i} = ${res}<br>`)
+			}
+		}
+	</script>
+ </body>
+</html>

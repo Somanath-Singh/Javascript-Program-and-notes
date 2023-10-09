@@ -1,0 +1,34 @@
+<!-- example on Arrays -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<title>Array</title>
+ </head>
+ <body>
+	<h3>demo on  array methods</h3>
+	<script>
+		const eles = [10,20,30,40,50,60,70,80,90];	
+		document.write(`Array	:${eles}<br>`);
+
+		//deletion				splice(st-ind, count)
+		let x=eles.splice(6, 1);
+		document.write(`after del		:${eles}<br>`);
+		document.write(`${x}<br>`);
+		eles.splice(2,3);
+		document.write(`after del		:${eles}<br>`);
+
+		//insertion			splice(st-ind, 0, new eles)
+		eles.splice(0, 0, 101);
+		document.write(`after ins		:${eles}<br>`);
+		eles.splice(5, 0, 202,303,404);
+		document.write(`after ins		:${eles}<br>`);
+
+		//update			splice(st-ind, count, new eles)
+		eles.splice(1,1,111);
+		document.write(`after update	:${eles}<br>`);
+		eles.splice(7, 2, 222,333);
+		document.write(`after update	:${eles}<br>`);	
+ 	</script>	
+ </body>
+</html>

@@ -1,0 +1,44 @@
+<!-- example on JS control statements -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<title>JS25</title>
+ </head>
+ <body>
+	<h3>demo on switch</h3>
+	<script>
+		//1st	it sup all datatypes
+		let a;
+		a="ram";		//or		a=false		or		a=1.5		or		a=10
+		switch(a)
+		{
+			case "ram":		document.write("yes<br>");
+								break;
+			default:		document.write("No<bR>");
+		}
+
+		//2nd		it sup	coditions
+		let n=-10;
+		switch(n>=0)
+		{
+			case true:	document.write("+ve number<br>");
+								break;
+			case false:	document.write("-ve number<br>")
+		}	
+
+		//3rd	it sup variable in case
+		let x=10, y=20;
+		n=10;
+		switch(n)
+		{
+			case x:	document.write("X")
+							break;
+			case y:	document.write("Y");
+							break;
+			default:		document.write("None");
+		}
+	
+	</script>
+ </body>
+</html>

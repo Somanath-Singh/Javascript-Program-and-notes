@@ -1,0 +1,30 @@
+<!-- example on DOM -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dom</title>
+ </head>
+ <body>
+	<h3>demo on html attributes</h3>
+	<img src="images/pic1.jpg" width="400px" height="300px">
+	<script>
+		const img = document.images[0];
+		//	OR
+		//const img = document.querySelector("img");
+		console.log( img.getAttribute("width"));
+		console.log( img.height);
+		img.width="600";
+		//img.src="images/pic2.jpg";
+		img.removeAttribute("src");
+	</script>
+	<br>
+	<button>change pic</button>
+	<script>
+		document.querySelector("button").onclick=()=>{
+							img.src="images/pic3.jpg";
+							//img.setAttribute("src","images/pic3.jpg");
+						}
+	</script>
+ </body>
+</html>

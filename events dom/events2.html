@@ -1,0 +1,39 @@
+<!-- example on Event handling -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<title>JS</title>
+	<style>
+		img{
+			width:260px;
+			height:260px;
+			border:2px solid;
+			margin-right:40px;
+		}
+	</style>
+ </head>
+ <body>
+	<h3>demo on dom events</h3>
+	<div align="center">
+		<img id="img1" src="images/car1.jpg"/>
+		<img id="img2" src="images/car2.jpg"/>
+		<img id="img3" src="images/car3.jpg "/>
+	</div>
+	<script>
+		const im1 = document.querySelector("#img1");
+		const im2 = document.querySelector("#img2");
+		const im3 = document.querySelector("#img3");
+
+		im1.onmouseover=()=>{ im1.src= "images/car3.jpg" };
+		im1.onmouseout=()=>{ im1.src= "images/car1.jpg" };
+
+		im2.onmouseover=()=>{ im2.src= "images/car1.jpg" };
+		im2.onmouseout=()=>{ im2.src= "images/car2.jpg" };
+
+		im3.onmouseover=()=>{ im3.src= "images/car2.jpg" };
+		im3.onmouseout=()=>{ im3.src= "images/car3.jpg" };
+	</script>
+  </body>
+</html>
+

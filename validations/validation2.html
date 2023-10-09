@@ -1,0 +1,44 @@
+<!-- example on validation @submition-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Validations</title>
+  </head>
+  <body>
+	<h2>Reset Password Form</h2>
+	<form action="resetpw.jsp" method="post">
+	  <label>New Password</label> <bR>
+	  <input type="password" id="pwd" name="pwd"/>
+	  <span id="err" style="color:red;"></span>
+	  <br>
+	  <input type="submit" name="sb" value="Reset Password"/>
+	</form>
+ 	<script>
+	  document.forms[0].onsubmit=function(frm){
+		//password checking
+		const pword=document.querySelector("#pwd");
+		let ch,upper=false,lower=false,dig=false,sym=false;
+		let pw=pword.value;
+		for(let i=0; i<pw.length; i++)
+		{
+		  ch=pw[i];
+		  if(ch>='0'&&ch<='9')
+			dig=true;
+		  else if(ch>='A'&&ch<='Z')
+			upper=true;
+		  else if(ch>='a'&&ch<='z')
+			lower=true;
+		  else
+			sym=true;
+		}
+		if(upper===false||lower===false||dig===false||sym===false||pw.length<8)  {
+			document.querySelector("#err").innerText="plz set a valid password";
+			pword.style.border="1px solid red";
+			frm.preventDefault();
+		}
+	  }		
+
+	</script> 
+  </body>
+</html>

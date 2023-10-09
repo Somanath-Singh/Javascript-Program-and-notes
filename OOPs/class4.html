@@ -1,0 +1,23 @@
+<!-- example on JS Classes -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Classes</title>
+		<script src="book.js"></script>
+  </head>
+  <body>
+		<h3>demo on constructor</h3>
+   		<script>
+			const b1 = new Book(101,"C prog","DR",400);	 //object creation & init
+			const b2= new Book(202,"UI Tech","TIm", 600);
+			document.write(`BookId	:${b1.id}<br>`);
+			document.write(`Title	:${b1.title}<br>`);
+			document.write(`Author	:${b1.author}<br>`);
+			document.write(`Price	:${b1.price}<br>`);
+
+			document.write(`${b2.id} &nbsp; ${b2.title} &nbsp; ${b2.author} &nbsp; ${b2.price}<br>`);
+
+		</script>
+  </body>
+</html>

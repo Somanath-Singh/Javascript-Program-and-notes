@@ -1,0 +1,42 @@
+<!-- example on DOM -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dom</title>
+ </head>
+ <body>
+	<h3>demo on dom events & styles</h3>
+	<div align="center">
+		<h1>Siva Kumar Y</h1>
+		<input type="radio" id="c1" name="color"> <label>Red</label>
+		&nbsp; &nbsp; 
+		<input type="radio" id="c2" name="color"> <label>Green</label>
+		&nbsp; &nbsp; 
+		<input type="radio" id="c3" name="color"> <label>Blue</label>
+	</div>
+	<script>
+		//changing background color of h1 tag
+		const h1 = document.querySelector("h1");
+
+		document.querySelector("#c1").onchange=function(){
+									h1.style.color="#ff0033";
+								}
+		document.querySelector("#c2").onchange=function(){
+									h1.style.color="#003300";
+								}
+		document.querySelector("#c3").onchange=function(){
+									h1.style.color="#0000cc";
+								}
+	</script>
+	<br>
+	<label>Select Color</label>
+	<input type="color" id="c">
+	<script>
+		//changing background color of body
+		document.querySelector("#c").onchange=function(){
+									document.body.style.background=c.value;
+								}
+	</script>
+ </body>
+</html>

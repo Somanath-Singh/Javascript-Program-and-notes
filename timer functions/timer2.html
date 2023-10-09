@@ -1,0 +1,36 @@
+<!-- example on timer functions -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>timer</title>
+ </head>
+ <body>
+	<h3>demo no timer functions</h3>
+	<h1 align="right"></h1>
+	<script>
+		//displaying digital time
+	 	setInterval( function(){
+									let d = new Date();
+									document.querySelector("h1").innerText=d.toLocaleTimeString();
+								}, "1000");		 
+	</script>
+	<hr>
+	<button id="start"> Start </button> &nbsp; &nbsp;
+	<button id="stop"> Stop&nbsp;</button> 
+	<script>
+		let ti;
+		//changing bg  color
+		document.querySelector("#start").onclick=function(){
+				ti=setInterval( function(){
+							let c='#'+parseInt(Math.random()*1000000);
+							document.body.style.background=c;
+						}, "100");
+		}
+		//stoping changing bg color
+		document.querySelector("#stop").onclick=function(){
+													clearInterval(ti);
+												}
+	</script>
+ </body>
+</html>

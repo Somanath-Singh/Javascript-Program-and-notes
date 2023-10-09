@@ -1,0 +1,32 @@
+<!-- finding sum of two numbers -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<title>JS16</title>
+ </head>
+ <body>
+	<div>
+		<label>First number</label> <br>
+		<input type="text" id="firstNum"/>  <br>
+		<label>Second number</label> <br>
+		<input type="text" id="secNum"/> <bR>
+		<button onclick="addition()">Addition</button>
+		<br>
+		<output id="op"></output>
+	</div>
+	<script>
+		function addition()
+		{
+			let x, y, res;		//local declarations
+			x = parseFloat(firstNum.value);	//data collecting
+			y = parseFloat(secNum.value);
+			res = x+y;
+			//document.write("Sum is "+res);	OR
+			//console.log("Sum is "+res)	OR
+			//alert("Sum is "+res);		OR
+			op.value="Sum is "+res;
+		}
+	</script>
+ </body>
+</html>

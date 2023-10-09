@@ -1,0 +1,31 @@
+<!-- example on JS Objects -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+  </head>
+  <body>
+		<h3>demo on  object literal </h3>		
+		<script>
+				let stud = { rno:1, name:"rama", total:360,
+									 getResult:function() {
+										if(stud.total>=400) //or  this.total
+											return "Pass";
+										else
+											return "Fail"
+									}
+								};
+			 
+			document.write(`Rollno	:${stud.rno}<br>`);
+			document.write(`Name		:${stud.name}<br>`);
+			document.write(`Total	:${stud.total}<br>`);
+			document.write(`Result		:${stud.getResult()}<br>`);
+			stud.total=460;  //update
+			document.write(`new Total	:${stud.total}<br>`);
+			document.write(`new Result		:${stud.getResult()}<br>`);
+		</script>		 
+   </body>
+</html>
+
+

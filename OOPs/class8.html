@@ -1,0 +1,39 @@
+<!-- example on inheritance  -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>OOPS</title>
+ </head>
+ <body>
+   <h2>demo on multi level Inheritance </h2>
+   <script>
+     class One	
+     {
+       constructor(){
+		 document.write("One const invoked<br>");
+       }
+     }
+
+     class Two extends One  //SLI
+     {
+       constructor(){
+         super();		//it calls One constructor 
+		 document.write("Two const invoked<br>");
+       }
+     }
+
+     class Three extends Two		//multi level
+     {
+       constructor(){
+         super();		//it calls Two constructor
+		 document.write("Three const invoked<br>");
+       }
+     }
+
+		//object creation
+		//new One();		only One
+		//new Two();		Two+One
+		new Three();		//Three+Two+One
+   </script>
+ </body>
+</html>

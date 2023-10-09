@@ -1,0 +1,23 @@
+<!-- exampe on functions -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<title>Functions</title>
+	<script>
+		//fun developing
+		const add = function(x=0,y=0,z=0) {
+									return x+y+z;
+								}
+	</script>
+  </head>
+  <body>
+		<h3>demo on default params (JS6)</h3>
+		<script>
+			document.write(`${ add(10,20,30) }<br>`);
+			document.write(`${ add() }<br>`);
+			document.write(`${ add(2,7) }<br>`);
+			document.write(`${ add(5) }<br>`);
+		</script>
+  </body>
+</html>

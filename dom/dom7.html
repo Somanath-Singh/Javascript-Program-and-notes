@@ -1,0 +1,39 @@
+<!--
+event handling
+1st Approach
+	using addEventListener() method of element object
+	Syn:		ele-obj.addEventListener("event-name", task)
+						event-name => without "on"   ex: click	, submit, load...
+						task => named fun/expr fun/arrow fun
+
+2nd Approach
+	using event properties of element object
+	Syn:	ele-obj.event-name=task;
+						event-name => with "on"   ex: onclick	, onsubmit, onload...
+						task => expr fun/arrow fun
+-->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dom</title>
+ </head>
+ <body>
+	<h3>demo on dom events</h3>
+	<button id="bt1"> Push </button> &nbsp; &nbsp;
+	<button id="bt2"> Pull </button>
+	<script>
+		//1st App
+		const bt1 = document.getElementById("bt1");
+		bt1.addEventListener("click", function(){ alert("hey, you pushed me") } );
+		//	OR
+		document.getElementById("bt1").addEventListener("click", function(){ alert("hey, you pushed me") } );
+
+		//2nd App
+		const bt2 =  document.getElementById("bt2");
+		bt2.onclick = function() {	alert("hey, you pulled me"); }
+		//		OR
+		document.getElementById("bt2").onclick = function() {	alert("hey, you pulled me"); }
+	</script>
+ </body>
+</html>

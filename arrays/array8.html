@@ -1,0 +1,25 @@
+<!-- example on Arrays -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<title>Array</title>
+ </head>
+ <body>
+	<h3>demo on  ... operator (JS6)</h3>
+	<script>
+		const a = [10,20,30];		
+		//const b = a;	
+		const b = [...a];	//array values are coping
+		document.write(`A	:${a}<br>`);
+		document.write(`B	:${b}<br>`);
+	
+		const x=[11,22,33,44,55];
+		const y=[12,34,56];
+		const z=[...x, ...y];		//array appending
+		document.write(`X	:${x}<br>`);
+		document.write(`Y	:${y}<br>`);		
+		document.write(`Z	:${z}<br>`);
+ 	</script>	
+ </body>
+</html>

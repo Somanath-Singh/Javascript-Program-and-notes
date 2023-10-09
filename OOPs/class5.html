@@ -1,0 +1,30 @@
+<!-- example on JS Classes -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Classes</title>
+	<script>
+		class Parent
+		{
+			constructor(){
+				document.write(`hi, i am Parent<br>`);
+			}
+		}
+		class Child	extends Parent
+		{
+			constructor() {
+				super();		
+				document.write(`hi, i am Child<br>`);
+			}
+		}
+	</script>
+  </head>
+  <body>
+		<h3>demo on inheritance</h3>
+   		<script>
+			new Child();  //
+
+		</script>
+  </body>
+</html>

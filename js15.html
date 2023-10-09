@@ -1,0 +1,24 @@
+<!-- example on  JS dialogs -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<title>JS15</title>
+ </head>
+ <body>
+		<h3>demo alert, confirm & prompt dialogs</h3>
+		<script>
+			window.alert("Hello world");
+			//window.alert("Apple<br>mango<br>Orange");
+			window.alert("Apple\nmango\nOrange");
+			alert("Div is "+100/45);
+
+			let x=window.confirm("do you want to delete it?");
+			document.write(x+"<bR>");
+
+			let n=window.prompt("enter name");
+			let a=prompt("enter age","1");
+			document.write(n+" "+a+" year(s) older");
+		</script>
+ </body>
+</html>

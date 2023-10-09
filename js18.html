@@ -1,0 +1,22 @@
+<!-- Arithmatic calculator-->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<title>JS18</title>
+ </head>
+ <body>
+	<div align="center">
+		<h3>Arithmatic Calc</h3>
+		<input type="text" id="firstNum" placeholder="First number"> <bR>
+		<input type="text" id="secNum" placeholder="Second number"> <bR>
+		<input type="text" id="result" readonly> <bR>
+		<button onclick="result.value=parseFloat(firstNum.value)+parseFloat(secNum.value)"> + </button> &nbsp; 
+		<button onclick="result.value=firstNum.value-secNum.value"> - </button> &nbsp; 
+		<button onclick="result.value=firstNum.value*secNum.value"> * </button> &nbsp; 
+		<button onclick="result.value=firstNum.value/secNum.value"> / </button> &nbsp; 
+		<button onclick="result.value=firstNum.value%secNum.value"> % </button> &nbsp; 
+		<button onclick="result.value=firstNum.value**secNum.value"> ^ </button> 
+	</div>
+ </body>
+</html>

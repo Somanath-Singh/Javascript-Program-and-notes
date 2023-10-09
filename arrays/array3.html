@@ -1,0 +1,42 @@
+<!-- example on Arrays -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+	<title>Array</title>
+ </head>
+ <body>
+	<h3>demo on arrays</h3>
+	<script>
+		//1st  it stores diff types of data
+		let a=["ram", 30, 5.11, true, new Date()];	//array init
+		document.write(`${a}<br>`);
+
+		//2nd			constant array
+		const b=[10,20,30];	//array init
+		document.write(`B	: ${b}<br>`);
+		b[1]=22;	//modification 
+		b[3]=44;
+		document.write(`B	: ${b}<br>`);		
+
+		//3rd	dynamic array
+		const eles=[11,22,33,44,55,66,77,88,99];
+		document.write(`Elements	${eles}<br>`);
+		eles.length=5;		//reduces
+		document.write(`Elements	${eles}<br>`);
+		eles.length=7;		//incre
+		eles[5]=101;
+		eles[6]=202;
+		document.write(`Elements	${eles}<br>`);
+		//eles.length=0;		
+
+		//4th  dynamic values
+		const data=[];
+		let s=+prompt("enter no.of values");
+		for(let i=0; i<s; ++i)
+			data[i]=prompt("enter value");
+
+		document.write(`data		:${data}<br>`);
+	</script>	
+ </body>
+</html>
