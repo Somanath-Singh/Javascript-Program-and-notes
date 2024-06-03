@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function verifycard(){
+            var cardno=document.getElementById("cardno").value;
+            var cardimg=document.getElementById("cimage");
+            if(cardno.startsWith("4444")){
+                cardimg.src="../media/user1.jpg";
+            }
+            else if(cardno.startsWith("5555")){
+                cardimg.src="../media/user2.jpg";
+            }
+            else{
+                cardimg.src="";
+                cardimg.alt="N/A";
+            }
+        }
+
+        function verifyemail(){
+            var email=document.getElementById("useremail").value;
+
+            if(email.endsWith("gmail.com")){
+                document.getElementById("msg").innerHTML="Email verified";
+                document.getElementById("msg").style.color="green";
+            }
+            else{
+                document.getElementById("msg").innerHTML = "Email not verified";
+                document.getElementById("msg").style.color="red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h2>Enter card no</h2>
+        <input type="text" id="cardno" onkeyup="verifycard()">
+        <br><br>
+        <img height="250px" width="250px" id="cimage">
+    </div>
+    <div>
+        <h2>Enter email</h2>
+        <input type="text" id="useremail" onkeyup="verifyemail()">
+        <div id="msg">
+
+        </div>
+    </div>
+</body>
+</html>

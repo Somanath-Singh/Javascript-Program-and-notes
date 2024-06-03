@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Api</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $.ajax({
+                mathod: 'GET',
+                url:'http://fakestoreapi.com/products'
+            })
+            .then(function(data){
+                $.each(data,function(key,value){
+                    $(`<li>${value.title}</li>`).append("ul");
+                })
+            })
+        })
+        .ajaxStart(function(){
+            alert('Request for API sent to server');
+        })
+        .ajaxComplete(function(){
+            alert('Data fetched on server');
+        })
+        .ajaxSuccess(function(){
+            alert('Data fetched from api');
+        })
+        .ajaxError(function(){
+            alert('something went wrong');
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

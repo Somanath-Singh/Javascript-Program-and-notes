@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ShowOffer(){
+            document.getElementById("pic").src="./media/background.jpg";
+        }
+
+        function HideOffer() {
+            document.getElementById("pic").src = "./media/certificate.jpg";
+            }
+    </script>
+</head>
+<body>
+    <p>Hold down mouse button on offer</p>
+    <img onmousedown="ShowOffer()" onmouseup="HideOffer()" src="./media/certificate.jpg" alt="" id="pic" width="50%">
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var userdetails={
+            pin :'93371'
+        }
+
+         var count = 0;
+
+        function submitClick(){
+             
+            var pin=document.getElementById("txtpin").value;
+
+            if(pin==userdetails.pin){
+
+                document.getElementById("val").value="Verified successfully ...";
+                document.getElementById("val").style.color="green";
+            }
+            else{
+
+                //for(var i=1; i<3 ;i++){
+
+                     if (count == 3) {
+
+                        document.querySelector("button").style.display="none";
+                        alert(count);
+
+                    }
+
+                    if(pin!=userdetails.pin){
+                        count++;
+                        document.getElementById("val").value="Invalid pin ..";
+                        document.getElementById("val").style.color="red";
+                        document.getElementById("txtpin").value=" ";
+                        alert(count);
+                        //break;
+                    }
+
+                }
+
+            }
+       // }
+    </script>
+</head>
+<body>
+    
+    <fieldset>
+        <legend>Your pin [max 3 attempts]</legend>
+        <input type="text" id="txtpin" size="5">
+        <button onclick="submitClick()" id="btn">submit</button>
+        <br><br>
+        <input type="text" id="val" disabled>
+    </fieldset>
+
+</body>
+</html>

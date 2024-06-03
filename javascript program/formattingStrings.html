@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function changeColor(){
+        //     alert(document.querySelector("select").value);
+        //     document.querySelector("p").innerHTml="Somanath Singh".fontcolor(document.querySelector("select").value);
+        // }
+
+         function changeColor() {
+                alert(document.querySelector("select").value);
+                document.querySelector("p").style.color=document.querySelector("select").value;
+            }
+    </script>
+</head>
+<body>
+    
+    <fieldset>
+        <legend>Choose color</legend>
+
+        <dl>
+            <dt>select</dt>
+            <dd>
+                <select id="chooseColor" onchange="changeColor()">
+                    <option value="green">Green</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="yellow">Yellow</option>
+                </select>
+            </dd>
+        </dl>
+
+       
+    </fieldset>
+    <p>Somanath Singh</p>
+
+    <p></p>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var images=["../media/about.jpg", "../media/background.jpg", "./media/banner.png", "./media/logo.png"]
+        
+        function onbodyload(){
+
+            for(var imgs of images){
+
+                var img=document.createElement("img");
+                img.src=imgs;
+                //img.width=400;
+                document.getElementById("gallery").appendChild(img);
+            }
+        }
+    </script>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            height: 500px;
+        }
+        #gallery img{
+            height: 300px;
+            width: 400px;
+            z-index: 0;
+            opacity: 0.4;
+        }
+         #gallery img:hover{
+            transform: scale(2);
+            transition: 2s;
+            z-index: 1;
+            opacity: 1;
+         }
+         marquee{
+            width:100%;
+         }
+    </style>
+</head>
+<body onload="onbodyload()">
+    <marquee onmouseover="this.stop()" onmouseout="this.start()">
+
+        <div id="gallery">
+
+        </div>
+        <!-- <img src="./media/about.jpg" alt="" width="200px">
+        <img src="./media/background.jpg" alt="" width="200px">
+        <img src="./media/banner.png" alt="" width="200px">
+        <img src="./media/logo.png" alt="" width="200px"> -->
+    </marquee>
+</body>
+</html>

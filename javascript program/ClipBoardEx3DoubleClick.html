@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ViewImage(){
+            window.open('./media/background.jpg','Background image' ,'width=600 height=500');
+        }
+    </script>
+</head>
+<body>
+    <img ondblclick="ViewImage()" src="./media/background.jpg" alt="" width="200px">
+    <p>Double click to view in large</p>
+    <!--Events for hyperlink -->
+    <a href="javascript:ViewImage()">Click to view image</a>
+</body>
+</html>

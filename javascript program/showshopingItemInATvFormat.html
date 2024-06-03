@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.css">
+
+    <script>
+        function Getproduct(url){
+            fetch(url)
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                document.getElementById("prodtitle").innerHTML=data.title;
+                document.getElementById("prodimg").src=data.image;
+                document.getElementById("proddescription").innerHTML=data.description;
+                document.getElementById("prodrating").innerHTML=data.rating.rate;
+            })
+
+            
+        }
+
+        function bodyload(){
+            Getproduct("http://fakestoreapi.com/products/1");
+            nextclick();
+            previoueclick();
+        }
+
+        var count=1;
+        function nextclick(){
+            count++;
+            Getproduct(`http://fakestoreapi.com/products/${count}`);
+        }
+        function previoueclick(){
+            count--;
+            Getproduct(`http://fakestoreapi.com/products/${count}`);
+        }
+
+        function productsliderchanges(){
+
+            var id=parseInt(document.getElementById("productslider").value);
+            Getproduct(`http://fakestoreapi.com/products/${id}`)
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div class="container" style="margin-top: 100px;width: 600px;">
+        <div class="justify-content-center align-item-center" style="height:300px;">
+                    <div>
+                        <input type="range" onchange="productsliderchanges()" id="productslider" min="1" max="20" value="1" class="input-group">
+                    </div>
+                    <div class="card">
+                        <h2>Product details</h2>
+                        <div class="card-header text-center">
+                            <h4 id="prodtitle"></h4>
+                        </div> 
+                        <div class="card-body text-center">
+                            <img id="prodimg" width="250px" height="250px">
+                            <p id="proddescription"></p>
+                            <h2 id="prodrating"></h2>
+                        </div>
+                        <div class="card-footer text-center">
+                            <button class="btn btn-danger">
+                                <span onclick="previoueclick()">|<|</span>
+                            </button>
+                            <button class="btn btn-danger">
+                                <span onclick="nextclick()">|>|</span>
+                            </button>
+                        </div>
+                 </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<script>
+    var products=[
+        {Name:'TV',category:'Electronics'},
+        { Name: 'Shoe', category: 'Footware' },
+        { Name: 'Mobile', category: 'Electronics' }
+    ];
+
+    //var electronics=products.filter(function(item){return item.category=='Electronics'});
+   //or
+   var electronics=products.filter(item=>item.category=='Electronics');
+  for(var item of electronics){
+    document.write(item.Name +"<br>");
+  }
+  
+  document.write(electronics[0].Name );
+  
+  for(let i=0;i<products.length;i++){
+    document.write(products[i].Name+"<br>"+products[i].category);
+  }
+
+</script>

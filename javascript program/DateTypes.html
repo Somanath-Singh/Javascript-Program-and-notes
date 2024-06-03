@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let now=new Date();
+
+        let months=["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "nobember","december"] ;
+        let weekdays=["sunday", "monday", "tuesday", "wednesday", "thrusday", "friday", "satarday", "sunday"];
+       
+        // document.write(now.toLocaleDateString()+"<br>");//11/29/2023
+
+         let now1 = new Date("2023-11-29");
+
+         now1.setMonth(5);
+            document.write(`
+
+            manufactured date: ${now1.getDate()} <br>
+            manufactured month: ${months[now1.getMonth()]}<br>
+            manufactured week: ${weekdays[now1.getDay()]}<br>
+            manufactured year: ${now1.getFullYear()}<br>
+            current date : ${weekdays[now1.getDay()]} ,${now1.getDate()}  -  ${months[now1.getMonth()]} , ${now1.getFullYear()}
+            
+            `);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

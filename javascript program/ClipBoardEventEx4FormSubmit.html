@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function SubmitClick(){
+            alert("Data Submited to database .")
+        }
+        function ResetClick() {
+            alert("Data reset .")
+        }
+        function CityChanged(){
+
+            //document.getElementById("frmregister").submit();
+            //or
+            //usimg form name we can access the form directly
+            frmregister.submit();
+            
+        }
+    </script>
+</head>
+<body>
+    
+    <form name="frmregister" id="frmregister" onsubmit="SubmitClick()" onreset="ResetClick()">
+        <dl>
+            <dt>user name</dt>
+            <dd><input type="text" name="username"></dd>
+            <dt>Age</dt>
+            <dd><input type="number" name="age"></dd>
+            <dt>City</dt>
+            <dd>
+                <select name="city" onchange="CityChanged()">
+                    <option value="Hyd">Hyd</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="GudGaon">GudGaon</option>
+                </select>
+            </dd>
+            <button type="submit">submit</button>
+            <button type="reset">cancle</button>
+        </dl>
+    </form>
+</body>
+</html>

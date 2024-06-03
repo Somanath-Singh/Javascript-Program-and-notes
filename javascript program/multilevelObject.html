@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var data=[
+            {category:"Electronics",products:["tv","mobile"]},
+            { category: "Footware", products: ["sparx", "Lancer"] }
+        ];
+
+        function bodyLoad(){
+
+            for(var item of data){
+
+                var li=document.createElement("li");
+                li.innerHTML=item.category;
+
+                for(var product of item.products){
+
+                    var ul=document.createElement("ul");
+                    var innerli=document.createElement("li");
+                    innerli.innerHTML=product;
+                    ul.appendChild(innerli);
+                    li.appendChild(ul);
+                    document.querySelector("ol").appendChild(li);
+
+                }
+
+            }
+            /*dynamicaly create select droupdown using multilevel object*/
+            for(var items of data){
+
+                var optgroup=document.createElement("optgroup");
+                optgroup.label=items.category;
+
+                for(var products of items.products){
+
+                    var option=document.createElement("option");
+                    option.innerHTML=products;
+                    optgroup.appendChild(option);
+
+                    document.querySelector("select").appendChild(optgroup);
+
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <ol>
+
+    </ol>
+
+    <select>
+
+    </select>
+    <!-- <select>
+        <optgroup label="Electronics">
+            <option>tv</option>
+            <option>mobile</option>
+        </optgroup>
+        <optgroup label="footware">
+            <option>sparx</option>
+            <option>lancer</option>
+        </optgroup>
+    </select> -->
+</body>
+</html>

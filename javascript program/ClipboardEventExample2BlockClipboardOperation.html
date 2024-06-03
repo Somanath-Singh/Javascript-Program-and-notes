@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        document.oncontextmenu=function(){
+            alert("Right click ! is disabled .");
+            return false;
+        }
+        // document.onselectstart=function(){
+        //     alert("Select is disabled .");
+        //     return false;
+        // }
+        document.oncopy=function(){
+            alert("Copy is disabled .");
+            return false;
+        }
+    </script>
+
+</head>
+<!--oncopy="return false" -->
+<body>
+    <h2>page is secure -you cant right click,cut copy,or select .</h2>
+</body>
+</html>

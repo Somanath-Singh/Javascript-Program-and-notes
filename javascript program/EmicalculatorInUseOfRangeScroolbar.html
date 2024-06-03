@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.css">
+    <script>
+
+        function AmountChange(){
+            document.getElementById("txtamount").value=document.getElementById("amountrange").value;
+        }
+
+        function YearChange() {
+            document.getElementById("txtyear").value = document.getElementById("yearrange").value;
+        }
+
+        function IntrestChange() {
+            document.getElementById("txtintrest").value = document.getElementById("intrestrange").value;
+        }
+
+        function updateAmount(){
+            document.getElementById("amountrange").value= document.getElementById("txtamount").value;
+        }
+
+        function updateYear() {
+            document.getElementById("yearrange").value = document.getElementById("txtyear").value;
+        }
+
+        function updateIntrest() {
+            document.getElementById("intrestrange").value = document.getElementById("txtintrest").value;
+        }
+
+        function Calculate(){
+            var p=parseInt(document.getElementById("txtamount").value);
+            var n = parseFloat(document.getElementById("txtyear").value);
+            var r = parseInt(document.getElementById("txtintrest").value);
+
+            var amount= p * r * (1 + r) * n * 12 / ((1 + r) * n * 12 - 1);
+
+            var msg=document.getElementById("msg");
+            msg.innerHTML=amount;
+            msg.style.color="red";
+        }
+    </script>
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col">
+                <div class="input-group">
+                    Amount you want &nbsp;&nbsp;<span>&#8377</span>&nbsp;&nbsp;<input id="txtamount" type="text" class="form-element" onchange="updateAmount()">
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-group">
+                    for&nbsp;&nbsp; <input type="text" id="txtyear" class="form-element" onchange="updateYear()"> &nbsp;&nbsp;year
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-group">
+                    Intrest rate&nbsp;&nbsp; <input id="txtintrest" type="text" class="form-element" onchange="updateIntrest()"> &nbsp;&nbsp;%
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                50,000&nbsp;&nbsp;&nbsp;&nbsp;<input id="amountrange" type="range" min="50000" max="4000000" value="50000" onchange="AmountChange()">&nbsp;&nbsp;&nbsp;&nbsp; 4000000
+            </div>
+            <div class="col">
+                1&nbsp;&nbsp;&nbsp;&nbsp;<input id="yearrange" type="range" min="1" max="5" value="1" onchange="YearChange()">&nbsp;&nbsp;&nbsp;&nbsp; 5
+            </div>
+            <div class="col">
+                10.5&nbsp;&nbsp;&nbsp;&nbsp;<input id="intrestrange" type="range" min="10" max="21" value="10" onchange="IntrestChange()">&nbsp;&nbsp;&nbsp;&nbsp;21.5
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <button class="btn btn-primary" onclick="Calculate()">Calculate</button>
+            </div>
+            <div class="col">
+                <h4 id="msg"></h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

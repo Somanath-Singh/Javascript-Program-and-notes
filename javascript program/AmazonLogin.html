@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Login</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.css">
+
+    <script>
+        var userdetails={
+            Email:'somanathsingh531@gmail.com',
+            Mobile:'9337169920',
+            Password:'Singh@12345'
+        }
+        /*declare userid as global variable */
+        var userid="";
+        function ContinueClick(){
+
+            userid=document.getElementById("txtuser").value;
+
+            if(userid==userdetails.Email){
+
+                /*document.write(`Login success with your Email ${userid}`);*/
+                /*when email is correct show the password box and hide the email box*/
+                document.getElementById("password").style.display="block";
+                document.getElementById("user-id").style.display="none";
+                
+                document.getElementById("usererror").innerHTML = "";
+            
+            }else if(userid==userdetails.Mobile){
+
+                 document.write(`Login success with your mobile ${userid}`);
+                /*when mobile no is correct show the password box and hide the email box*/
+                document.getElementById("password").style.display="block";
+                document.getElementById("user-id").style.display = "none";
+            
+            }else{
+
+                document.getElementById("usererror").innerHTML="please enter valid email and password .";
+            
+            }
+        }
+
+        function ConfirmClick(){
+
+            var password=document.getElementById("txtpass").value;
+            if(password==userdetails.Password){
+                document.write(`Login success with ${userid}`);
+            }
+            else{
+                document.getElementById("pwderror").innerHTML="Invalid password";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div class="container-fluid mt-5">
+        <div class="d-flex justify-content-center align-item-center">
+            <div>
+                <h2>Amazon Login</h2>
+                <div id="user-id">
+                    <label for="txtuser" class="form-label">sign in with email or password</label>
+                    <div>
+                        <input type="text"  id="txtuser" class="form-control">
+                        <div class="text-danger" id="usererror"></div>
+                    </div>
+                    <br>
+                    <button class="btn btn-warning w-100" onclick="ContinueClick()">
+                        continue
+                    </button>
+                </div>
+                <div id="password" style="display: none">
+                    <label for="txtpass" class="form-label">your password</label>
+                    <div>
+                        <input type="text" id="txtpass" class="form-control">
+                        <div class="text-danger" id="pwderror"></div>
+                    </div>
+                    <br>
+                    <div class="mt-2">
+                        <button class="btn btn-warning w-100" onclick="ConfirmClick()">
+                            continue
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

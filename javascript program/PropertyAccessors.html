@@ -1,0 +1,35 @@
+<script>
+    var username=prompt("Enter user name .");
+    var password=prompt("Enter Password .");
+    var role=prompt("Enter role .")
+    var proname=prompt("Enter product name .");
+
+    class Product{
+
+        _productName;
+
+        get ProductName()//accessor
+        {
+            return this._productName;
+        }
+        set ProductName(newname){
+           
+            if(username=="john" && password=="john@123" && role=="admin"){
+                 this._productName = newname;
+            }else{
+                document.write(`Unothorized: your role is ${role} you are unothorized to set product name Only admin can set the product name  .`);
+            }
+        }
+    }
+    //create object for class
+    let obj=new Product; 
+    //setter
+    obj.ProductName=proname;
+    //getter 
+    if(obj.ProductName){
+        document.write(`product name :${obj.ProductName}`);
+    }
+    //or
+    //document.write(`product name :${obj.ProductName}`);
+
+</script>

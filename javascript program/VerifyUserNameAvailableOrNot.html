@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var users=[
+            {username :'john'},
+            {username :'john_nit'},
+            {username :'devid'},
+            {username :'devid1'}
+        ];
+
+        function VerifyUser(){
+
+            var UserName=document.getElementById("txtname").value;
+            var msg=document.getElementById("namemsg");
+
+            for(var user of users){
+                if(user.username === UserName){
+                    msg.innerHTML="User name taken - Try with another .";
+                    msg.style.color="red";
+                    break;/*terminate the execution of if block but stay in for loop */
+                    return;/*comout the loop*/
+                }else{
+                      msg.innerHTML = "User name available .";
+                    msg.style.color = "green";
+                }
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Register user</h2>
+
+    <dl>
+        <dt>User name</dt>
+        <dd><input type="text" id="txtname" onblur="VerifyUser()"></dd>
+        <dd id="namemsg"></dd>
+
+    </dl>
+</body>
+</html>

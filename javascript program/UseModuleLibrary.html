@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>module system</title>
+    <!--used as module no javascript -->
+
+    <script type="module">
+
+        import  Title, { Details } from '../library/ProductModule.js';
+
+        var h1=document.querySelector("h1");
+        h1.innerHTML=Title("product details");
+        h1.style.textAlign="center";
+        
+        //display the details
+        var p=document.querySelector("p");
+        p.innerHTML=`product name=${Details("samsung tv",25000).Name} <br> price=${Details("samsung tv", 25000).price}`;
+
+    </script>
+
+</head>
+<body>
+    <h1></h1>
+    <p></p>
+</body>
+</html>

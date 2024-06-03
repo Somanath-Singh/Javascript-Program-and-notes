@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                    $.getJSON("http://fakestoreapi.com/products")
+                    .then(function (data) {
+                        $.each(data, function (key, value) {
+                            $(`<tr><td>${value.title}</td><td>${value.price}</td></tr>`).appendTo("tbody");
+                        })
+                    })
+            })
+        })
+            .ajaxStart(function () {
+                alert('Request for API sent to server');
+            })
+            .ajaxComplete(function () {
+                alert('Data fetched on server');
+            })
+            .ajaxSuccess(function () {
+                alert('Data fetched from api');
+            })
+            .ajaxError(function (e/*event action*/, xhrError/*xml Http request Error*/) {
+                alert(`${xhr.status}:${xhrError.statusText}`);/*print the error message*/
+            })
+    </script>
+</head>
+
+<body>
+    <button>get value</button>
+    <br>
+    <table width="400" border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+
+</html>

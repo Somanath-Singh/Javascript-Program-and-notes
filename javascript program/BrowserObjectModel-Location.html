@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        function GetLocation(){
+
+            document.getElementById("host").innerHTML=location.host;
+            document.getElementById("protocol").innerHTML = location.protocol;
+            document.getElementById("port").innerHTML = location.port;
+            document.getElementById("href").innerHTML = location.href;
+            document.getElementById("path").innerHTML = location.pathname;
+
+        }
+
+        function Reload(){
+            location.reload();
+        }
+        
+    </script>
+    <style>
+        fieldset{
+            background-color: cyan;
+            color:rgb(0, 68, 255);
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend><button onclick="GetLocation()">get location details</button></legend>
+        
+        <dl>
+            <dt>server name /IP address </dt>
+            <dd id="host"></dd>
+            <dt>protocol</dt>
+            <dd id="protocol"></dd>
+            <dt>port</dt>
+            <dd id="port"></dd>
+            <dt>url</dt>
+            <dd id="href"></dd>
+            <dt>path</dt>
+            <dd id="path"></dd>
+        </dl>
+        <button onclick="Reload()">Reload</button>
+    </fieldset>
+</body>
+</html>

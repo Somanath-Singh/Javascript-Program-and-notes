@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function Focus(){
+            document.getElementById("msg").innerHTML="Name in Block letters .";
+            document.getElementById("msg").style.color="red";
+        }
+        function Blur(){
+            var name=document.getElementById("name").value;
+            document.getElementById("name").value=name.toUpperCase();
+            document.getElementById("msg").innerHTML="";
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Username</legend>
+        <input type="text" id="name" onfocus="Focus()" onblur="Blur()">
+        <div id="msg"></div>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function datechange(){
+            
+            var departured=new Date(document.getElementById("txtdate").value);
+            document.querySelector("h2").innerHTML=`Departured date is : ${departured.toLocaleDateString()}`;
+        }
+    </script>
+</head>
+<body>
+    departured date : <input type="date" id="txtdate" onchange="datechange()">
+    <h2></h2>
+</body>
+</html>

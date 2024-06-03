@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //default argument
+        function InsertClick1(obj, e){
+          
+            if(e.ctrlKey){
+                location.href='https://www.amazon.in';
+            }else{
+                  document.write(`
+            button id:${obj.id}<br>
+            button class:${obj.className}<br>
+            clicked at x:${e.clientX}<br>
+            ctrl key:${e.ctrlKey}<br>
+            `);
+            }
+
+        }
+
+        //custome argument
+            function InsertClick2(obj, e, msg) {
+
+                if (e.ctrlKey) {
+                    location.href = 'https://www.amazon.in';
+                } else {
+                    document.write(`
+            button id:${obj.id}<br>
+            button class:${obj.className}<br>
+            clicked at x:${e.clientX}<br>
+            ctrl key:${e.ctrlKey}<br>
+            Message: ${msg}<br>
+            `);
+                }
+
+            }
+    </script>
+</head>
+<body>
+    <!--default event-->
+    <button id="btnInsert" class="btn btn-primary" onclick="InsertClick1(this, event)">Click -Ctrl+Click to visit amazon</button>
+    <br>
+    <!--custome event-->
+    <button id="btnInsert" class="btn btn-primary" onclick="InsertClick2(this, event, 'You clicked custome argument .')">Click -Ctrl+Click to visit
+        amazon</button>
+</body>
+</html>

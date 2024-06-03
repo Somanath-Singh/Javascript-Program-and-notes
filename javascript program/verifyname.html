@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeCase(){
+            var name=document.getElementById("txtname").value;
+            var firstchar=name.charAt(0);
+            var restchars=name.substring(1);
+            var sentence=firstchar.toUpperCase() + restchars.toLowerCase();
+            document.getElementById("txtname").value= sentence;
+        }
+
+        function verifyCase(){
+            var name=document.getElementById("txtname").value;
+            if(name.charCodeAt(0)>=65 && name.charCodeAt(0) <= 90){
+
+                document.querySelector("p").innerHTML="";
+            }
+            else{
+                document.querySelector("p").innerHTML="First letter must be capital ..".fontcolor("red");
+            }
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Test</legend>
+        <div>
+            <input type="text" id="txtname" onblur="changeCase()">
+        </div>
+    </fieldset>
+    <hr>
+    <fieldset>
+        <legend>Username</legend>
+        <div>
+            <input type="text" id="txtname" onkeyup="verifyCase()">
+            <p></p>
+        </div>
+    </fieldset>
+</body>
+</html>

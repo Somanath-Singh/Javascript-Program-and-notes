@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <script>
+         var student = [
+                { name: "somanath", age: 23, photo: "../media/user1.jpg" },
+                { name: "somya", age: 24, photo: "../media/user2.jpg" },
+                { name: "trilochan", age: 13, photo: "../media/user1.jpg" }
+            ];
+
+            function bodyload(){
+
+               for(var stu of student){
+
+                 var card = document.createElement("div");
+                   card.className = "card w-25 m-2 p-2";
+                   card.innerHTML = `
+                    <img src=${stu.photo} height="200" width="140" class="card-img-top">
+                    <div class="card-header">
+                        <h2>${stu.name}</h2>                       
+                    </div>
+                    <div class="card-body">
+                        <h2>${stu.age}</h2>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-danger w-100">
+                        <span class="bi bi-cart4"></span>Student details
+                        </button>
+                    </div>
+                `;
+                document.getElementById("catalog").appendChild(card);
+               }
+            }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div class="container">
+        <div id="catalog" class="d-flex flex-wrap">
+
+        </div>
+    </div>
+</body>
+</html>

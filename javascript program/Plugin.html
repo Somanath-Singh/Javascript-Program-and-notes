@@ -1,0 +1,22 @@
+<!--To see all the plugins-->
+<!-- <script>
+    function f1(){
+        for (var item of navigator.plugins){
+            document.write(item.name+"<br>");
+        }
+    }
+    f1();
+</script> -->
+
+<!--check the specific plugins -->
+<script>
+    function f2(){
+        if(navigator.plugins['PDF Viewer'] == undefined){
+            alert("Your browser is not enabled for pdf -please install it .");
+            location.href="http://www.adobe.com/downloads";
+        }else{
+            document.write("You can watch pdf document .");
+        }
+    }
+      f2();
+</script>

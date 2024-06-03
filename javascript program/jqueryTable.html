@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Add jquery script to execute jquery operation-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            var data=[
+                {Name:'Samsung tv', Price:'500.66'},
+                { Name: 'Nokia phone', Price: '300.66' }
+            ];
+            $.each(data,function(key, value){
+                $(`<tr><td>${value.Name}</td><td>${value.Price}<td></tr>`).appendTo("tbody");
+            })
+        })
+    </script>
+</head>
+<body>
+    <table width="300" border="1">
+
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+    </table>
+</body>
+</html>

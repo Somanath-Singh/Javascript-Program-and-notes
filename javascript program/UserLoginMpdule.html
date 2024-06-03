@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>0
+
+     <script>
+        var users = [
+            { username: 'john', password: 'john@123'},
+            { username: 'john_nit', password: 'john11' },
+            { username: 'devid', password: '12345' },
+            { username: 'devid1', password: '54321' }
+        ];
+
+        function VerifyUser() {
+
+            var UserName = document.getElementById("txtname").value;
+             var password = document.getElementById("txtpass").value;
+            var msg = document.getElementById("msg");
+
+            for (var user of users) {
+                if (user.username === UserName && user.password === password) {
+                   
+                    document.write("<h2>Login success .</h2>");
+                } else {
+                    msg.innerHTML = "Username  and password invalid .";
+                    msg.style.color = "red";
+                }
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Register user</h2>
+
+    <dl>
+        <dt>User name</dt>
+        <dd><input type="text" id="txtname"></dd>
+        <dt>User Password</dt>
+        <dd ><input type="text" id="txtpass"></dd>
+        <dd><button onclick="VerifyUser()">Login</button></dd>
+        <h2 id="msg"></h2>
+    </dl>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function verifyPassword(){
+             var pass = document.getElementById("txtpass").value;
+            var regExp = /(?=.*[A-Z])\w{4,15}/;
+            var msg = document.getElementById("msg");
+
+            if (pass == "") {
+                msg.innerHTML = "Password required";
+                msg.style.color = "red";
+            }
+            else {
+                if (pass.match(regExp)) {
+                    msg.innerHTML = "strong password";
+                    msg.style.color = "lime";
+                }
+                else {
+                    if (pass.length < 4) {
+                        msg.innerHTML = "poor password";
+                        msg.style.color = "blue";
+                    }
+                    else {
+                        msg.innerHTML = "Weak password";
+                        msg.style.color = "green";
+                    }
+                }
+            }
+        }
+       
+        function verifyPhone(){
+            var phone=document.getElementById("txtphone").value;
+            var msg=document.getElementById("pmsg");
+            regExp=/\+91\d{10}/;
+
+            if(phone.match(regExp)){
+                msg.innerHTML="";
+            }
+            else{
+                msg.innerHTML="Invalid mobile no";
+                msg.style.color="red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Verify password</h2>
+    <input type="text" onkeyup="verifyPassword()" id="txtpass">
+
+    <div id="msg"></div>
+
+    <div>
+        <h2>verify phone no</h2>
+        <input type="text" id="txtphone" onkeyup="verifyPhone()">
+
+        <h3 id="pmsg"></h3>
+    </div>
+</body>
+</html>

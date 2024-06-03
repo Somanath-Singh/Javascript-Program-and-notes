@@ -1,0 +1,55 @@
+<script>
+    class Employee{
+        fname;
+        lname;
+        desgignation;
+        print(){
+            document.write(`${this.fname} ${this.lname} - ${this.desgination}`);
+        }
+    }
+
+    class Developer extends Employee
+    {
+        fname="raja";
+        lname="kumar";
+        desgination="developer";
+        role="Developer role -build,debug,test,deploy <br>";
+        print(){
+            super.print();
+            document.write(this.role);
+            }
+    }
+
+     class Admin extends Employee {
+            fname = "rakesh";
+            lname = "kumar";
+            desgination = "Admin";
+            role = "Admin role -Authorization <br>";
+            print() {
+                super.print();
+                document.write(this.role);
+            }
+        }
+
+         class Manager extends Employee {
+                fname = "raju";
+                lname = "kumar";
+                desgination = "Manager";
+                role = "Manager role -approvals <br>";
+                print() {
+                    super.print();
+                    document.write(this.role);
+                }
+            }
+ 
+         let employee=new Array(new Developer(), new Admin(), new Manager());
+         
+         let Desgination =prompt("Enter designation :");
+
+           for(var emp of employee){
+
+            if(emp.desgination==Desgination){
+                emp.print();
+            }
+           }
+</script>

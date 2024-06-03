@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer function</title>
+    <style>
+        #container{
+            background-color: aqua;
+            display: flex;
+            justify-content: space-around;
+            padding: 12px;
+            font-size: 23px;
+            font-weight: 500;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+    <script>
+
+        function clock(){
+
+            var now=new Date();
+            document.getElementById("time").innerHTML=now.toLocaleTimeString();
+
+        }
+
+        function bodyload() {
+            setInterval(clock, 10);
+
+            var now=new Date();
+            var msg=document.getElementById("msg");
+            var hrs=now.getHours();
+
+            if(hrs>=0 && hrs<=12){
+                msg.innerHTML="Good Morning .";
+            }
+            else if(hrs>=13 && hrs<=17){
+                msg.innerHTML="Good Afternoon";
+            }
+            else{
+                msg.innerHTML="Good Evening";
+            }
+            }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div id="container">
+        <span>Amazon shoping</span>
+
+
+        <span id="msg"></span>
+
+        <span id="time"></span>
+    </div>
+</body>
+</html>

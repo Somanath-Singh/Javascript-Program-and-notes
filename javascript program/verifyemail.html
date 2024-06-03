@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function verifyEmail(){
+            var email=document.getElementById("email").value;
+            var msg=document.querySelector("h2");
+            var atpos=email.indexOf("@");
+
+            if(atpos<6){
+                msg.innerHTML="Invalid email";
+            }
+            else{
+                msg.innerHTML="email verified";//@ should appier after 6 character
+            }
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Your email</legend>
+        <input type="text" id="email"> <button onclick="verifyEmail()">Submit</button>
+    </fieldset>
+
+    <h2></h2>
+</body>
+</html>

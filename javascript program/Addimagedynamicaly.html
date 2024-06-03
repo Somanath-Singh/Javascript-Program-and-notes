@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function addImage(){
+
+             var pic = document.createElement("img");
+             pic.src="./media/background.jpg";
+             pic.width="300"
+             pic.height="250";
+
+             //append
+             document.getElementById("container").appendChild(pic);
+        }
+       
+    </script>
+</head>
+<body>
+    <h2><button onclick="addImage()">AddImage</button></h2>
+
+    <div id="container">
+       
+    </div>
+</body>
+</html>

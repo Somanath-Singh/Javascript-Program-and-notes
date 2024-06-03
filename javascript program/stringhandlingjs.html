@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function onKeySubmit(){
+
+            var name=document.getElementById("name").value;
+            var msg=document.getElementById("msg");
+            if(name.length >=4 && name.length <=10){
+
+                msg.innerHTML="user name is verified ".fontcolor("green").italics();
+            }
+            else{
+                msg.innerHTML="user name invalid ".fontcolor("red").italics();
+            }
+        }
+
+        function fontChanges(){
+
+            var txtname=document.getElementById("name").value;
+            document.getElementById("name").value=txtname.toUpperCase();
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <dl>
+            <dt><h2>Enter your name</h2></dt>
+            <dd><input type="text" id="name" onkeyup="onKeySubmit()" onblur="fontChanges()"></dd>
+            <dd id="msg"></dd>
+        </dl>
+        <input type="submit" onclick="onKeySubmit()">
+    </div>
+</body>
+</html>
